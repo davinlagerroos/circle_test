@@ -5,7 +5,6 @@ gem 'rails', '3.2.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'validates_timeliness', '~>3.0.9'
 gem 'will_paginate', '~>3.0.3'
 gem 'acl9', '~>0.12.0'
