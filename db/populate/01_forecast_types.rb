@@ -1,0 +1,7 @@
+ForecastType.create_or_update(:id => 1, :name => "Draft", :active => true, :internal => false, :copyable => false)
+ForecastType.create_or_update(:id => 2, :name => "Plan", :active => true, :internal => false, :copyable => true)
+ForecastType.create_or_update(:id => 3, :name => "What-if", :active => false, :internal => false, :copyable => false)
+ForecastType.create_or_update(:id => 4, :name => "Internal Draft", :active => true, :internal => true, :copyable => false)
+ForecastType.create_or_update(:id => 5, :name => "Internal Plan", :active => true, :internal => true, :copyable => true)
+ForecastType.create_or_update(:id => 6, :name => "Shared Draft", :active => true, :internal => false, :copyable => false)
+ForecastType.create_or_update(:id => 7, :name => "One Number Estimate", :active => true, :internal => true, :copyable => true)

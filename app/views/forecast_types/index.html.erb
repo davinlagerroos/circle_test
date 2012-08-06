@@ -1,0 +1,26 @@
+<h1>Listing forecast_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Active</th>
+    <th>Actions</th>
+  </tr>
+
+<% @forecast_types.each do |forecast_type| %>
+  <tr>
+    <td><%= forecast_type.name %></td>
+    <td><%= forecast_type.active? %></td>
+    <td>
+      <%= link_to 'Show', forecast_type %>
+      <%= link_to 'Edit', edit_forecast_type_path(forecast_type) %>
+      <%= link_to 'Destroy', forecast_type, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+<% end %>
+</table>
+<br />
+
+<%= link_to 'New Forecast type', new_forecast_type_path %>
+
+<p>Number of People: <%= $redis.scard 'person_ids' %></p>
