@@ -1,7 +1,6 @@
 deployment:
   production:
     branch: master
-    heroku:
-      appname: circle-test
     commands:
-      - ./deploy.sh
+      - git push git@heroku.com:circle-test.git
+      - heroku run rake redis:populate
