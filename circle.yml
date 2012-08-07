@@ -4,4 +4,4 @@ deployment:
     heroku:
       appname: circle-test
     commands:
-      - rake redis:populate
+      - ./deploy.sh
