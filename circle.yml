@@ -3,4 +3,3 @@ deployment:
     branch: master
     commands:
       - git push git@heroku.com:circle-test.git
-      - heroku run rake redis:populate
