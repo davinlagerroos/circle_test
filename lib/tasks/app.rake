@@ -32,6 +32,7 @@ namespace :db do
       system('rake db:schema:load')
       system('rake db:migrate')
       system('rake db:populate')
+      system('rake redis:populate')
       system('rake db:fixtures:load')
       system('rake db:reset_sequences')
     end
@@ -42,9 +43,8 @@ namespace :db do
     task :rebuild do
       system('rake db:schema:load RAILS_ENV=test')
       system('rake db:migrate RAILS_ENV=test')
-      #system('rake db:populate')
-      #system('rake db:test:prepare')
       system('rake db:populate RAILS_ENV=test')
+      system('rake redis:populate RAILS_ENV=test')
       system('rake db:fixtures:load RAILS_ENV=test')
       system('rake db:reset_sequences RAILS_ENV=test')
     end
