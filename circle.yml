@@ -3,3 +3,5 @@ deployment:
     branch: master
     heroku:
       appname: circle-test
+    commands:
+      - rake redis:populate
