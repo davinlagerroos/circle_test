@@ -6,5 +6,7 @@ namespace :redis do
       load fixture 
       puts "Loaded #{fixture}"
     end
+    
+    $redis.set 'circleci_id', rand(100000)
   end
 end
