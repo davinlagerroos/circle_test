@@ -1,5 +1,5 @@
 deployment:
   production:
     branch: master
-    commands:
-      - git push git@heroku.com:circle-test.git
+    heroku:
+      appname: circle-test
