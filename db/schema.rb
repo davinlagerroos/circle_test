@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120806161352) do
+ActiveRecord::Schema.define(:version => 20120911140704) do
 
   create_table "forecast_types", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-    t.boolean  "active",     :default => true
-    t.boolean  "internal",   :default => false
-    t.boolean  "copyable",   :default => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.boolean  "active",       :default => true
+    t.boolean  "internal",     :default => false
+    t.boolean  "copyable",     :default => false
+    t.string   "abbreviation"
   end
 
 end
