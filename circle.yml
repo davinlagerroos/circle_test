@@ -6,6 +6,7 @@ deployment:
       - git push git@heroku.com:davinl-circleci-test.git
       - rake development heroku:db:migrate
       - rake development heroku:config:list
+      - rake development heroku:rake[redis:populate]
       # - heroku run rake redis:populate
     # heroku:
     #   appname: davinl-circleci-test
