@@ -2,9 +2,9 @@ deployment:
   production:
     branch: master
     commands:
-      - rake development deploy
-      # - git push git@heroku.com:davinl-circleci-test.git
+      # - rake development deploy
+      - git push git@heroku.com:davinl-circleci-test.git
       # - rake heroku:db:migrate
-      # - heroku run rake redis:populate
+      - heroku run rake redis:populate
     # heroku:
     #   appname: davinl-circleci-test
